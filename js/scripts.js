@@ -13,3 +13,15 @@ $(function() {
         }
     });
 });
+
+id="groupScheduleButton"
+id="personalScheduleButton"
+
+$(function() {
+    $("#groupScheduleButton").click(function() {
+        $("#groupSchedule").modal("show")
+    });
+    $("#personalScheduleButton").click(function() {
+        $("#personalSchedule").modal("show")
+    });
+});
