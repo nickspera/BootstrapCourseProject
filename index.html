@@ -29,7 +29,8 @@
                 <div class="collapse navbar-collapse justify-content-end" id="headNavbar">
                     <ul class="navbar-nav pull-right">
                         <li class="nav-item active"> <a class="nav-link" href="#"><i class="fa fa-home fa-md"></i> Home</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="schedule.html"><i class="fa fa-list fa-md"></i> Classes/Schedule</a> </li>
+                        <!-- Removed Schedule Page -->
+                        <!-- <li class="nav-item"> <a class="nav-link" href="schedule.html"><i class="fa fa-list fa-md"></i> Classes/Schedule</a> </li> -->
                         <li class="nav-item"> <a class="nav-link" href="contactus.html"><i class="fa fa-address-card fa-md"></i> Contact </a> </li>
                     </ul>
                 </div>
@@ -54,9 +55,8 @@
             </div>
         </header>
     </section>
-    <hr>
 
-    <!-- Main Features -->
+    <!-- Main Features Removed-->
     <!-- <section id="mainfeatures"> 
         <div class="container-fluid subcontain">
             <div class="row subjecthead">
@@ -92,16 +92,96 @@
             <div class="row row-content">
                 <div class="col-sm-6 align-items-center">
                     <h4 class="text-center">GROUP CLASSES</h4>
-                    <p class="text-center">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                    <img class="img-fluid" src=images/groupclass.jpg>
+                    <a role="button" class="btn sendbtn" id="groupScheduleButton">Check group schedule here.</a>
                 </div>
+
+                <!-- Group Class Modal -->
+                <div id="groupSchedule" class="modal fade" role="dialogue">
+                    <div class="modal-dialog modal-md" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title text-center">Group Class Schedule</h3>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                <!-- calander api -->
+                                <iframe class="align-items-center" src="https://calendar.google.com/calendar/embed?src=ht3jlfaac5lfd6263ulfh4tql8%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-sm-6">
                     <h4 class="text-center">PERSONAL TRAINING</h4>
-                    <p class="text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                    <img class="img-fluid" src=images/personaltraining.jpg>
+                    <a role="button" class="btn sendbtn" id="personalScheduleButton">Sign-up for personal training here.</a>
                 </div>
+
+                <!-- Personal Training Modal -->
+                <div id="personalSchedule" class="modal fade" role="dialogue">
+                    <div class="modal-dialog modal-md" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title text-center">Personal Training Sign-Up</h3>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <form>
+                                        <div class="form-group row">
+                                            <label for="firstName" class="col-sm-3 col-form-label">First Name</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control form-control-sm" id="firstName" placeholder="First Name" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="firstName" class="col-sm-3 col-form-label">Last Name</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control form-control-sm" id="lastName" placeholder="Last Name" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="email" class="col-sm-3 col-form-label">Email</label>
+                                            <div class="col-sm-9">
+                                                <input type="email" class="form-control form-control-sm" id="email" placeholder="Email" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                                <label for="contactMethod" class="col-sm-3" >Preferred Method of Contact</label>
+                                                <div class="col-sm-9">
+                                                    <input type="radio" id="text" name="contactMethod" value="text" required>
+                                                    <label for="text">Text</label> <br/>
+                                                    <input type="radio" id="call" name="contactMethod" value="call">
+                                                    <label for="call">Call</label> <br/>
+                                                    <input type="radio" id="email" name="contactMethod" value="email">
+                                                    <label for="email">Email</label>
+                                                </div>
+                                            </div>
+                                        <div class="form-group row">
+                                            <label for="message" class="col-sm-3 col-form-label">Message</label>
+                                            <div class="col-sm-9">
+                                            <textarea id="message" class="form-control" placeholder="Tell us about yourself and your goals..."></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col">
+                                                <button type="button" class="btn btn-secondary text-white" data-dismiss="modal">Cancel</button>
+                                                <button type="submit" class="btn sendbtn">SEND IT</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
-    <hr>
 
     <!-- Coaches  need imgs centered/same sized-->
     <section id="coaches">
@@ -145,7 +225,6 @@
             </div>
         </div>
     </section>
-    <hr>
 
     <!-- Testimonials Carousel -->
     <section id="testimonials">
@@ -204,6 +283,61 @@
         </div>
     </section>
 
+    <!-- Membership Options -->
+    <section id="membership">
+        <div class="container subcontain">
+            <div class="row subjecthead text-center align-items-center">
+                <div class="col">
+                    <h1>MEMBERSHIP OPTIONS</h1>
+                    <hr class="subhrctr" stlye="float: center;">
+                </div>
+            </div>
+            <div class="row row-content">
+                <div class="col-10 mx-auto">
+                    <div class="table-responsive">
+                        <table class="table table-bordered text-center">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Option
+                                    </th>
+                                    <th>
+                                        Price
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        1 Month Unlimited
+                                    </td>
+                                    <td>
+                                        $200 / month
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        6 Month Unlimited
+                                    </td>
+                                    <td>
+                                        $190 / month
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        12 Month Unlimited
+                                    </td>
+                                    <td>
+                                        $ 180 / month
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Location / Contact -->
     <section id="contact">
@@ -256,14 +390,15 @@
         <div class="row text-center d-flex justify-content-center">
             <div class="col-sm-4">
                 <h6 class="text-uppercase">
-                    <a class="btn text-white" role="button" href="#">About</a>
+                    <a class="btn text-white" role="button" href="#">Home</a>
                 </h6>
             </div>
-            <div class="col-sm-4">
+            <!-- Removed Schedule Page -->
+            <!-- <div class="col-sm-4">
                 <h6 class="text-uppercase">
-                    <a class="btn text-white" role="button" href="schedule.html">Classes / Schedule</a>
+                    <a class="btn text-white" role="button" href="schedule.html">NOPE</a>
                 </h6>
-            </div>
+            </div> -->
             <div class="col-sm-4">
                 <h6 class="text-uppercase">
                     <a class="btn text-white" role="button" href="contactus.html">Contact</a>
@@ -294,8 +429,6 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
-
-</body>
+    <script src="js/scripts.js"></script>
 
 </html>
